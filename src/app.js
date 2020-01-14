@@ -17,9 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
           .then(response => response.json())
           .then(returnData => this.countries = returnData)
       }
-      // selectCountry: function(index){
-      //   countrySelected = this.countries[index]
-      // }
     }
   });
 });

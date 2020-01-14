@@ -10,23 +10,16 @@
     <div id="app">
       <h1>Some countries...</h1>
 
-      <form>
-
         <label for="select-country">Please select a country:</label>
 
-        <select name="select-country">
-          <option v-for="(country, index) in countries" :value="country.name">
+        <select name="select-country" v-model="countrySelected">
+          <option v-for="country in countries" :value="country">
             {{country.name}}
           </option>
         </select>
 
-        <input type="submit" value="Select Country">
+        <!-- <h2>{{countrySelected.name}}</h2> -->
 
-      </form>
-
-      <!-- <ul>
-        <li>{{countrySelected.name}}</li>
-      </ul> -->
     </div>
 
   </body>
