@@ -9,9 +9,24 @@
   <body>
     <div id="app">
       <h1>Some countries...</h1>
-      <ul>
-        <li v-for="country in countries">{{country}}</li>
-      </ul>
+
+      <form>
+
+        <label for="select-country">Please select a country:</label>
+
+        <select name="select-country">
+          <option v-for="(country, index) in countries" :value="country.name">
+            {{country.name}}
+          </option>
+        </select>
+
+        <input type="submit" value="Select Country">
+
+      </form>
+
+      <!-- <ul>
+        <li>{{countrySelected.name}}</li>
+      </ul> -->
     </div>
 
   </body>
